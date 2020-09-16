@@ -34,8 +34,8 @@ def create_mosaic(path_picture, path_database, param=PARAM):
             indice = np.unravel_index(np.argmin(deltas, axis=None), deltas.shape)[0]
             output[param*i: param*(i+1), param*j:param*(j+1)] = pics[indice]
 
-    plt.imsave(f'./outputs/{path.basename(path_picture)[:-4]} - mosaic.png', output.astype(np.uint8)/255)
-    print("Image saved " + f'./outputs/{path.basename(path_picture)[:-4]} - mosaic.png')
+    plt.imsave(f'./outputs/{path.basename(path_picture)[:-4]}-mosaic.png', output.astype(np.uint8)/255)
+    print("Image saved " + f'./outputs/{path.basename(path_picture)[:-4]}-mosaic.png')
 
 
 def resize(array):
