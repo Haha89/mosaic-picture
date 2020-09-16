@@ -19,6 +19,7 @@ run `python photomosaic.py [path_picture] [path_database] [param]`
 **path_picture**: path of the picture to transform  (ex ./pictures/rome.jpg)  
 **path_database**: path of the folder containing your database of picture (ex ./database)  
 **param**: optional, size in pixel of each square tile. Default 25  
+example : 'python photomosaic.py ./pictures/taj-mahal.jpg ./database 15'
 
 ### Result:
 

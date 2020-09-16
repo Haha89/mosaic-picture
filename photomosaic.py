@@ -11,7 +11,7 @@ import cv2
 PARAM = 25 #Number of Pixels of the each tile
 TAR = 3000 #Number of Pixels of the output 
 
-def create_mosaic(picture, path_database, param=PARAM):
+def create_mosaic(path_picture, path_database, param=PARAM):
     """Generate the mosaic"""
 
     pics, avgs = [], []
@@ -21,7 +21,7 @@ def create_mosaic(picture, path_database, param=PARAM):
         pics.append(pic)
         avgs.append(np.mean(pic, axis=(0, 1)))
 
-    source = resize(np.array(Image.open(picture)))
+    source = resize(np.array(Image.open(path_picture)))
     height, width = source.shape[:2]
     output = np.zeros((height//param * param, width//param * param, 3))
 
@@ -34,8 +34,8 @@ def create_mosaic(picture, path_database, param=PARAM):
             indice = np.unravel_index(np.argmin(deltas, axis=None), deltas.shape)[0]
             output[param*i: param*(i+1), param*j:param*(j+1)] = pics[indice]
 
-    plt.imsave(f'./outputs/{path.basename(picture)} - mosaic.png', output.astype(np.uint8)/255)
-    print("Image saved " + f'./outputs/{path.basename(picture)} - mosaic.png')
+    plt.imsave(f'./outputs/{path.basename(path_picture)[:-4]} - mosaic.png', output.astype(np.uint8)/255)
+    print("Image saved " + f'./outputs/{path.basename(path_picture)[:-4]} - mosaic.png')
 
 
 def resize(array):
@@ -52,9 +52,9 @@ if __name__ == "__main__":
     
     if len(sys.argv) < 3 or len(sys.argv) > 4:
         raise SyntaxError("Wrong number of arguments. Please provide :\n"
-                          "  -picture path: path of the source picture \n"
-                          "  -path database : path of the folder containing the database of pictures\n"
-                          "  -pixel tile : optional, size in pixel of each square tile. Default 25\n")
+                          "  -path_picture path: path of the source picture \n"
+                          "  -path_database : path of the folder containing the database of pictures\n"
+                          "  -param: optional, size in pixel of each square tile. Default 25\n")
                           
     elif len(sys.argv) == 3:
         create_mosaic(path.abspath(sys.argv[1]), sys.argv[2])
