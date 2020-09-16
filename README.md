@@ -23,7 +23,7 @@ run `python photomosaic.py [path_picture] [path_database] [param]`
 ### Result:
 
 ![alt text](https://github.com/Haha89/mosaic-picture/blob/master/pictures/rome.jpg "Input Picture")
-![alt text](https://github.com/Haha89/sudoku-solver/blob/master/results/Figure_2.png "Example of OCR")
+![alt text](https://github.com/Haha89/mosaic-picture/blob/master/outputs/rome.jpg "Mosaic generated")
 
 ### Next steps:
 - Improve the definition of best fit
