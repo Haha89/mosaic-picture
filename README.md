@@ -21,7 +21,8 @@ run `python photomosaic.py [path_picture] [path_database] [param]`
 **param**: optional, size in pixel of each square tile. Default 25 
 
 ### Result:
-![alt text](https://github.com/Haha89/sudoku-solver/blob/master/results/Figure_1.png "Picture Preprocessing")
+
+![alt text](https://github.com/Haha89/mosaic-picture/blob/master/pictures/rome.jpg "Input Picture")
 ![alt text](https://github.com/Haha89/sudoku-solver/blob/master/results/Figure_2.png "Example of OCR")
 
 ### Next steps:
