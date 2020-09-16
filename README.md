@@ -24,7 +24,7 @@ example : 'python photomosaic.py ./pictures/taj-mahal.jpg ./database 15'
 ### Result:
 
 ![alt text](https://github.com/Haha89/mosaic-picture/blob/master/pictures/rome.jpg "Input Picture")
-![alt text](https://github.com/Haha89/mosaic-picture/blob/master/outputs/rome.jpg "Mosaic generated")
+![alt text](https://github.com/Haha89/mosaic-picture/blob/master/outputs/rome - mosaic.png "Mosaic generated")
 
 ### Next steps:
 - Improve the definition of best fit
